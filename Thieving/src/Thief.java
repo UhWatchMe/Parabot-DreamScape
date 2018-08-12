@@ -17,6 +17,7 @@ import org.rev317.min.api.wrappers.SceneObject;
 public class Thief implements Strategy {
 
 public static int thievingLevel = 0;
+
     @Override
     public boolean activate() {
 
@@ -70,7 +71,7 @@ public static int thievingLevel = 0;
                 }
             }
 
-            if (thievingLevel == 99) {
+            if (thievingLevel >= 99) {
                 if (i.getId() == 4878){
                     System.out.println("Level is 99, stealing from Scimitar Stall.");
                     i.interact(0);
